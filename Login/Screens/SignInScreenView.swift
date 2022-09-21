@@ -37,7 +37,12 @@ struct SignInScreenView: View {
                         .padding(.vertical)
                     
                     
-                    PrimaryButton(title:"Email me a signup link")
+                    NavigationLink(
+                     destination: HomeScreen().navigationBarHidden(true),
+                     label: {
+                         PrimaryButton(title:"Email me a signup link")
+                     })
+                    .navigationBarHidden(true)
                     
                 }
                 
@@ -52,7 +57,6 @@ struct SignInScreenView: View {
             }
             .padding()
         }
-        
     }
 }
 
